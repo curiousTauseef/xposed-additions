@@ -122,7 +122,7 @@ public final class Common {
 	}
 	
 	public static String conditionToString(Context context, String condition) {
-		Integer id = context.getResources().getIdentifier("condition_type_$" + condition, "string", PACKAGE_NAME);
+		Integer id = context.getResources().getIdentifier("condition_type__" + condition, "string", PACKAGE_NAME);
 		
 		if (id > 0) {
 			return context.getResources().getString(id);
@@ -239,7 +239,7 @@ public final class Common {
 	}
 	
 	public static Integer getConditionIdentifier(Context context, String condition) {
-		return context.getResources().getIdentifier("condition_type_$" + condition, "string", Common.PACKAGE_NAME);
+		return context.getResources().getIdentifier("condition_type__" + condition, "string", Common.PACKAGE_NAME);
 	}
 	
 	/*
@@ -250,7 +250,7 @@ public final class Common {
 	 * http://code.google.com/p/android/issues/detail?id=8287
 	 */
 	public static int getQuantityResource(Resources resources, String idRef, int quantity) {
-		int id = resources.getIdentifier(idRef + "_$" + quantity, "string", PACKAGE_NAME);
+		int id = resources.getIdentifier(idRef + "__" + quantity, "string", PACKAGE_NAME);
 		
 		if (id == 0) {
 			id = resources.getIdentifier(idRef, "string", PACKAGE_NAME);

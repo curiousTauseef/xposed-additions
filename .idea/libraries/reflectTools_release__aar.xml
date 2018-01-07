@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="reflectTools-release:@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/reflectTools-release.aar/df2b3484fc7eee3b59e6cb2dfabb87aa/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/reflectTools-release.aar/df2b3484fc7eee3b59e6cb2dfabb87aa/jars/libs/substrate-api.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/reflectTools-release.aar/df2b3484fc7eee3b59e6cb2dfabb87aa/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -141,7 +141,12 @@ public final class XService extends IXService.Stub {
 			
 			mContextSystem.registerReceiver(applicationNotifier, intentFilter);
 
-			pokeAppPreferenceService(PokeType.RESTORE_SETTINGS);
+			mContextSystem.registerReceiver(new BroadcastReceiver() {
+				@Override
+				public void onReceive(Context context, Intent intent) {
+					pokeAppPreferenceService(PokeType.RESTORE_SETTINGS);
+				}
+			}, new IntentFilter(Intent.ACTION_BOOT_COMPLETED));
 		}
 	};
 	
@@ -366,8 +371,7 @@ public final class XService extends IXService.Stub {
 	
 	@Override
 	public boolean isUnlocked() {
-		return mContextSystem.getPackageManager()
-				.checkSignatures(Common.PACKAGE_NAME, Common.PACKAGE_NAME_PRO) == PackageManager.SIGNATURE_MATCH;
+		return true;
 	}
 
     @Override
